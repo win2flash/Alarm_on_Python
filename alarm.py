@@ -4,7 +4,8 @@ import datetime
 root = Tk()
 
 def Time(event):
-    btn["text"] = datetime.datetime.now().time()
+    now = datetime.datetime.now().time()
+    btn["text"] = now.strftime("%H:%M:%S")  # https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior
 
 btn = Button(root,                  #родительское окно
              text="Click me",       #надпись на кнопке
